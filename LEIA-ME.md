@@ -14,7 +14,7 @@ Análise de transcrição ou vídeo, adaptação, roteiro, revisão, carrossel, 
 
 A integração Gemini está implementada, mas não foi testada com credencial real. Os testes automáticos usam respostas simuladas. Modelo e cota dependem da conta do proprietário. Nenhuma IA paga ou cobrança está ativada no código.
 
-Links são identificação de referência: não há download/importação automática de Instagram, TikTok ou YouTube. É necessário fornecer transcrição ou arquivo. Vídeos aceitos: MP4/WebM de até 2 MB e 60 segundos no formulário. O servidor limita bytes; o limite de duração é verificado no navegador. A compatibilidade do arquivo também depende do modelo.
+Links públicos do YouTube e Shorts são enviados como fileData ao Gemini, sem transcrição manual. Instagram e TikTok ainda não têm importação por link: use o arquivo do vídeo. O formulário aceita MP4, MOV e WebM até 100 MB e 3 minutos (duração verificada no navegador). O envio ocorre em partes de 2 MB através da função video, com sessões assinadas válidas por uma hora e sem expor a chave da API. O Gemini armazena o arquivo temporariamente. A compatibilidade depende do codec e do modelo configurado. O envio consome requisições e créditos da hospedagem; os planos gratuitos têm cotas. Não há mudança automática para plano pago.
 
 ## Publicar pelo celular
 1. Extraia este ZIP no app Arquivos do iPhone.
